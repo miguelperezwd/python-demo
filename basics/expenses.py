@@ -1,9 +1,12 @@
 # This program will sum all your expenses
 
-expenses = [10, 5, 14.30, 20, 9, 15]
-sum = 0
+total = 0
+expenses = []
+num_expenses = int(input("Enter # of expenses:"))
 
-for x in expenses:
-    sum = sum + x
+for i in range(num_expenses):
+    expenses.append(float(input("Enter an expense:")))
 
-print("You spent $", sum, " on lunch this week.", sep='')
+total = sum(expenses)
+
+print("You spent $", total, sep='')
